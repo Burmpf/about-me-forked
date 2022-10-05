@@ -7,7 +7,7 @@ body{
 header{
   text-align: center;
   color: orange;
-  text-shadow: 4px 4px black;
+  text-shadow: 4px 4px 4px black;
 }
 
 h1{
@@ -34,10 +34,12 @@ main{
 
 
 .blockTitle{
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
   margin: 10px;
   text-decoration: underline;
+  color: orange;
+  text-shadow: 3px 2px 2px black;
 }
 
 .imageDiv{
@@ -60,7 +62,7 @@ main{
 
 #biography{
   text-align: center;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .textRegular{
@@ -79,7 +81,7 @@ ul{
 
 #goals{
   text-align: left;
-  font-weight: 300;
+  font-weight: 400;
   margin: 50px;
   font-size: 20px;
 }
@@ -95,19 +97,38 @@ footer{
   text-shadow: 2px 2px black;
 }
 
-.social{
+#facebook{
   width: 80px;
   height: 80px;
   padding-left: 10px;
   padding-right: 10px;
   cursor: pointer;
   transition: 0.2s;
+  vertical-align: middle;
 }
 
-.social:hover{
+#facebook:hover{
   opacity: 0.5;
 }
 
-.social:active{
+#facebook:active{
+  opacity: 0.25;
+}
+
+#linkedin{
+  width: 94px;
+  height: 94px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  vertical-align: middle;
+}
+
+#linkedin:hover{
+  opacity: 0.5;
+}
+
+#linkedin:active{
   opacity: 0.25;
 }
