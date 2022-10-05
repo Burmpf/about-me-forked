@@ -80,6 +80,14 @@ ul{
   list-style-position: inside;
 }
 
+ol{
+  list-style-type: decimal;
+  list-style-position: inside;
+  font-weight:400;
+  font-size: 25px;
+  padding: 10px;
+}
+
 #goals{
   text-align: left;
   font-weight: 400;
