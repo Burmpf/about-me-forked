@@ -14,7 +14,7 @@ while(username === undefined || username === null || username === ''){
 // Questions 1-5 --------------------------------------------------
 
 let questionArray = ['1. Did I grow up in Missouri before moving to Florida in high school?', '2. Did I study Aerospace Engineering in college...even though I did not enjoy it as much as I enjoyed college football and Air Force ROTC?', '3. Did I join the Air Force and fly on the E-3 AWACS as an Air Battle Manager and deploy to the Middle East 3 times in support of operations against ISIS?', '4. Is my wife\'s name Kayla and do we have 2 sons, Jacob (age 3) and Ethan (age 1)?', '5. Did I propose to my wife while skydiving because that\'s how my parents met?'];
-let responseArray=['I actually was born in Missouri and lived there for 15 years before moving to Florida.', 'I actually did not really enjoy Aerospace Engineering and spent most of my time with Air Force ROTC and cheering on the Gators.', 'I actually am an Air Battle Manager on the E-3 AWACS and deployed 3 times to the Middle East.', 'My wife\'s name is Kayla and we have 2 sons, Jacob and Ethan.', 'My parents met while skydiving, so I decided to propose to my wife while skydiving.']
+let responseArray=['I actually was born in Missouri and lived there for 15 years before moving to Florida.', 'I actually did not really enjoy Aerospace Engineering and spent most of my time with Air Force ROTC and cheering on the Gators.', 'I actually am an Air Battle Manager on the E-3 AWACS and deployed 3 times to the Middle East.', 'My wife\'s name is Kayla and we have 2 sons, Jacob and Ethan.', 'My parents met while skydiving, so I decided to propose to my wife while skydiving.'];
 let answerArray = ['y','y','y','y','y'];
 let userAnswer = [];
 
