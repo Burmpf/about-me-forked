@@ -22,11 +22,11 @@ for(let i = 0; i < questionArray.length; i++){
   while(userAnswer[i] !== 'y' && userAnswer[i] !== 'n'){
     let rawAnswer = prompt(`${questionArray[i]}`).toLowerCase();
     if(rawAnswer === 'y' || rawAnswer === 'yes'){
-      userAnswer.push('y');
+      userAnswer[i] = 'y';
     } else if(rawAnswer === 'n' || rawAnswer === 'no'){
-      userAnswer.push('n');
+      userAnswer[i] = 'n';
     } else {
-      userAnswer.push(rawAnswer);
+      userAnswer[i] = rawAnswer;
     }
     console.log(`Question ${i+1} Answer: ${userAnswer[i]}`);
     if(userAnswer[i] === answerArray[i]){
