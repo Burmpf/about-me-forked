@@ -51,7 +51,9 @@ console.log(`Random Number: ${correctNumber}`);
 let guessNumber;
 let attemptsRemaining = 3;
 let correct = false;
+
 function quizQuestions6() {
+
   while(attemptsRemaining >= 0 && correct === false){
     guessNumber = parseInt(prompt('6. Guess a random number between 0-9.'));
     console.log('Random Answer: ' + guessNumber);
@@ -83,30 +85,34 @@ quizQuestions6();
 
 let correctArray = ['oklahoma', 'florida', 'missouri'];
 let guessArray;
-attemptsRemaining = 5;
-correct = false;
-while(attemptsRemaining >= 0 && correct === false){
-  guessArray = prompt('7. Do you remember which states I have lived in? Name just one!').toLowerCase();
-  console.log('State Answer: ' + guessArray);
-  for(let i=0; i < correctArray.length; i++){
-    if(guessArray === correctArray[i]){
-      correct = true;
-      break;
+
+function quizQuestions7(){
+
+  attemptsRemaining = 5;
+  correct = false;
+  while(attemptsRemaining >= 0 && correct === false){
+    guessArray = prompt('7. Do you remember which states I have lived in? Name just one!').toLowerCase();
+    console.log('State Answer: ' + guessArray);
+    for(let i=0; i < correctArray.length; i++){
+      if(guessArray === correctArray[i]){
+        correct = true;
+        break;
+      }
+    }
+    if(correct){
+      alert(`That is correct, ${username}! I've lived in ${correctArray[0]}, ${correctArray[1]}, and ${correctArray[2]}.`);
+      correctGuess++;
+    } else {
+      alert(`That is incorrect. You have ${attemptsRemaining} attempts remaining.`);
+      attemptsRemaining--;
     }
   }
-  if(correct){
-    alert(`That is correct, ${username}! I've lived in ${correctArray[0]}, ${correctArray[1]}, and ${correctArray[2]}.`);
-    correctGuess++;
-  } else {
-    alert(`That is incorrect. You have ${attemptsRemaining} attempts remaining.`);
-    attemptsRemaining--;
+  if(correct === false){
+    alert(`I'm sorry, ${username}...I've lived in ${correctArray[0]}, ${correctArray[1]}, and ${correctArray[2]}.`);
   }
+  console.log(`Correct Guesses: ${correctGuess}/7`);
 }
-if(correct === false){
-  alert(`I'm sorry, ${username}...I've lived in ${correctArray[0]}, ${correctArray[1]}, and ${correctArray[2]}.`);
-}
-console.log(`Correct Guesses: ${correctGuess}/7`);
-
+quizQuestions7();
 // Results -----------------------------------------------------------------------
 
 alert(`${username}, you answered ${correctGuess}/7 questions correctly. I hope you learned more about me!`);
