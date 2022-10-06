@@ -18,29 +18,32 @@ let responseArray=['I actually was born in Missouri and lived there for 15 years
 let answerArray = ['y','y','y','y','y'];
 let userAnswer = [];
 
-for(let i = 0; i < questionArray.length; i++){
-  while(userAnswer[i] !== 'y' && userAnswer[i] !== 'n'){
-    let rawAnswer = prompt(`${questionArray[i]}`).toLowerCase();
-    if(rawAnswer === 'y' || rawAnswer === 'yes'){
-      userAnswer[i] = 'y';
-    } else if(rawAnswer === 'n' || rawAnswer === 'no'){
-      userAnswer[i] = 'n';
-    } else {
-      userAnswer[i] = rawAnswer;
-    }
-    console.log(`Question ${i+1} Answer: ${userAnswer[i]}`);
-    if(userAnswer[i] === answerArray[i]){
-      alert(`That is correct, ${username}!`);
-      correctGuess++;
-    } else if(userAnswer[i] === 'n'){
-      alert(`${responseArray[i]}`);
-    } else {
-      alert('Please reply with either "yes","y","no", or "n".');
-    }
-  }
-  console.log(`Correct Guesses: ${correctGuess}/${i+1}`);
-}
+function quizQuestions(){
 
+  for(let i = 0; i < questionArray.length; i++){
+    while(userAnswer[i] !== 'y' && userAnswer[i] !== 'n'){
+      let rawAnswer = prompt(`${questionArray[i]}`).toLowerCase();
+      if(rawAnswer === 'y' || rawAnswer === 'yes'){
+        userAnswer[i] = 'y';
+      } else if(rawAnswer === 'n' || rawAnswer === 'no'){
+        userAnswer[i] = 'n';
+      } else {
+        userAnswer[i] = rawAnswer;
+      }
+      console.log(`Question ${i+1} Answer: ${userAnswer[i]}`);
+      if(userAnswer[i] === answerArray[i]){
+        alert(`That is correct, ${username}!`);
+        correctGuess++;
+      } else if(userAnswer[i] === 'n'){
+        alert(`${responseArray[i]}`);
+      } else {
+        alert('Please reply with either "yes","y","no", or "n".');
+      }
+    }
+    console.log(`Correct Guesses: ${correctGuess}/${i+1}`);
+  }
+}
+quizQuestions();
 // Question 6 -----------------------------------------------------------------------
 
 let correctNumber = Math.floor(Math.random() * 10);
