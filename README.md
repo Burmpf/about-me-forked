@@ -4,7 +4,9 @@
 
 This page is all about the author, Jason Christopher. When the page loads, it includes a 7-question quiz. The page includes his biography, education, job experience, goals, and top ten movies.
 
-### Author: Jason Christopher
+### Author: Jason Christopher 
+* Driver: Keyan Tabor
+* Navigator: Jason Christopher
 
 ### Links and Resources
 
@@ -20,3 +22,4 @@ This page is all about the author, Jason Christopher. When the page loads, it in
 * I've converted the first 5 questions of the quiz to a loop that uses an array of questions, answers, and responses.
 * I've implemented a random-number generator on Question 6 to change the answer every time a user comes to the page.
 * I need to remember that the response to a `prompt` is always a `string` and I need to use the `parseInt()` function to change it into a `number`.
+* Jason and Keyan worked collaboratively on this code!
