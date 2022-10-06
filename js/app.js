@@ -51,32 +51,34 @@ console.log(`Random Number: ${correctNumber}`);
 let guessNumber;
 let attemptsRemaining = 3;
 let correct = false;
-while(attemptsRemaining >= 0 && correct === false){
-  guessNumber = parseInt(prompt('6. Guess a random number between 0-9.'));
-  console.log('Random Answer: ' + guessNumber);
-  if(guessNumber === correctNumber){
-    alert(`That is correct, ${username}! The random number was ${correctNumber}.`);
-    correctGuess++;
-    correct = true;
-  } else if(guessNumber > correctNumber && guessNumber <= 9){
-    alert(`Your guess was too high! You have ${attemptsRemaining} attempts remaining.`);
-    attemptsRemaining--;
-  } else if(guessNumber < correctNumber && guessNumber >= 0){
-    alert(`Your guess was too low! You have ${attemptsRemaining} attempts remaining.`);
-    attemptsRemaining--;
-  } else if(guessNumber < 0 || guessNumber > 9){
-    alert(`Your guess was not between 0-9! You have ${attemptsRemaining} attempts remaining.`);
-    attemptsRemaining--;
-  } else {
-    alert(`Please reply with a valid number. You have ${attemptsRemaining} attempts remaining.`);
-    attemptsRemaining--;
+function quizQuestions6() {
+  while(attemptsRemaining >= 0 && correct === false){
+    guessNumber = parseInt(prompt('6. Guess a random number between 0-9.'));
+    console.log('Random Answer: ' + guessNumber);
+    if(guessNumber === correctNumber){
+      alert(`That is correct, ${username}! The random number was ${correctNumber}.`);
+      correctGuess++;
+      correct = true;
+    } else if(guessNumber > correctNumber && guessNumber <= 9){
+      alert(`Your guess was too high! You have ${attemptsRemaining} attempts remaining.`);
+      attemptsRemaining--;
+    } else if(guessNumber < correctNumber && guessNumber >= 0){
+      alert(`Your guess was too low! You have ${attemptsRemaining} attempts remaining.`);
+      attemptsRemaining--;
+    } else if(guessNumber < 0 || guessNumber > 9){
+      alert(`Your guess was not between 0-9! You have ${attemptsRemaining} attempts remaining.`);
+      attemptsRemaining--;
+    } else {
+      alert(`Please reply with a valid number. You have ${attemptsRemaining} attempts remaining.`);
+      attemptsRemaining--;
+    }
   }
+  if(correct === false){
+    alert(`I'm sorry, ${username}...the random number was ${correctNumber}.`);
+  }
+  console.log(`Correct Guesses: ${correctGuess}/6`);
 }
-if(correct === false){
-  alert(`I'm sorry, ${username}...the random number was ${correctNumber}.`);
-}
-console.log(`Correct Guesses: ${correctGuess}/6`);
-
+quizQuestions6();
 // Question 7 -----------------------------------------------------------------------
 
 let correctArray = ['oklahoma', 'florida', 'missouri'];
